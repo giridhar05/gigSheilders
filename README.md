@@ -205,36 +205,18 @@ We built this platform (untitled) to be a **groundbreaking safety-net** for Indi
 **Mermaid Diagrams:**  
 
 ```mermaid
-gantt
-    title Development Roadmap (2025–26)
-    dateFormat  YYYY-MM
-    section Phase 1: Research & Design
-    Persona & Context :done,    p1, 2025-01, 1mo
-    Data Gathering      :done,    p2, after p1, 2mo
-    Trigger Definition  :done,    p3, after p2, 1mo
-    ML Model Design     :active,  p4, after p3, 2mo
-    section Phase 2: Prototype
-    API Integration    :         p5, after p4, 2mo
-    Backend Development:         p6, after p5, 3mo
-    Testing & Feedback :         p7, after p6, 1mo
-    section Phase 3: Pilot
-    Pilot Launch       :         p8, after p7, 1mo
-    Monitoring & Iterate:        p9, after p8, 2mo
-```
-
-```mermaid
 flowchart LR
-    subgraph External Data Feeds
-        W[Weather (IMD/OpenWeather)] 
-        Q[AQI (CPCB/API)] 
-        T[Traffic Alerts] 
-        S[Platform API (Login/Orders)]
+    subgraph External["External Data Feeds"]
+        W[Weather IMD/OpenWeather]
+        Q[AQI CPCB/API]
+        T[Traffic Alerts]
+        S[Platform API Login/Orders]
     end
-    subgraph Insurance System
-        U[Rider App / Enrollment] 
-        D[Policy & User DB] 
-        E[Event Trigger Engine] 
-        C[Claim Engine & Fraud Checks] 
+    subgraph System["Insurance System"]
+        U[Rider App / Enrollment]
+        D[Policy & User DB]
+        E[Event Trigger Engine]
+        C[Claim Engine & Fraud Checks]
         P[Payout Processor]
         M[Dashboard & Analytics]
     end
@@ -246,7 +228,7 @@ flowchart LR
     D --> C
     E --> C
     C --> P
-    P --> Payments([UPI/Razorpay])
+    P --> Pay([UPI/Razorpay])
     E --> M
     C --> M
 ```
