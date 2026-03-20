@@ -233,6 +233,9 @@ flowchart LR
     C --> M
 ```
 
+
+
+
 *Figure 3: Timeline of development phases (top) and detailed system data flow (bottom).*
 
 **Sources:** We synthesized information from industry reports and APIs. For example, TeamLease finds metro riders earn ₹20–30K/month; parametric schemes in India (e.g. SEWA’s climate insurance) inspire our approach; and technical blogs (IMD API docs, Razorpay docs) guided our integrations. All factual claims above are backed by such references (see citations). Our prototype code (mocking platform logs and using public APIs) follows the design outlined here. By aligning with official data sources and tailoring to gig workers’ weekly earnings, we believe this product addresses a critical gap in the ecosystem.
